@@ -1,0 +1,70 @@
+/*
+Theme Name: No‑Nonsense FSE
+Theme URI: https://example.com/no-nonsense-fse
+Author: Flames
+Author URI: https://flames.blue
+Description: Een strak, minimalistisch blok‑theme met een interactieve Spline 3D‑hero. Dutch no‑nonsense stijl: futuristisch, digitaal, helder.
+Version: 1.0.0
+Requires at least: 6.3
+Tested up to: 6.5
+Requires PHP: 7.4
+Tags: full-site-editing, block-patterns, one-column, dark, accessibility-ready
+Text Domain: nononsense
+License: GPL-2.0-or-later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/* Baseline utility helpers voor subtiele gradients/overlays. */
+:root {
+  --accent: #6ee7ff; /* licht cyaan accent, pas aan indien gewenst */
+}
+
+body {
+  background-color: #020617; /* slate-950 */
+  color: #ffffff;
+}
+
+.has-accent-color { color: var(--accent); }
+.has-accent-background-color { background-color: var(--accent); }
+
+.gradient-sheen {
+  position: relative;
+}
+.gradient-sheen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(60% 60% at 50% 10%, rgba(110,231,255,0.15), transparent 60%);
+  pointer-events: none;
+}
+
+.card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+}
+
+.button-primary {
+  background: linear-gradient(90deg, var(--accent), #a78bfa);
+  color: #0b1220;
+  border-radius: 999px;
+  padding: 12px 18px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  gap: .5rem;
+  align-items: center;
+}
+.button-ghost {
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 999px;
+  padding: 12px 18px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  gap: .5rem;
+  align-items: center;
+}
